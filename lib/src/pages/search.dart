@@ -21,7 +21,6 @@ class _SearchState extends State<Search> {
     super.initState();
     for (var i = 0; i < 100; i++) {
       var gi = groupIndex.indexOf(min<int>(groupIndex)!);
-      print(gi);
       var size = 1;
       if (gi != 1) {
         size = Random().nextInt(100) % 2 == 0 ? 1 : 2;
@@ -29,7 +28,6 @@ class _SearchState extends State<Search> {
       groupBox[gi].add(size);
       groupIndex[gi] += size;
     }
-    print(groupBox);
   }
 
   Widget _appbar() {
@@ -38,7 +36,9 @@ class _SearchState extends State<Search> {
         Expanded(
           child: GestureDetector(
             onTap: () {
-              Get.to(SearchFocus());
+              //Get.to(SearchFocus());
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const SearchFocus()));
             },
             child: Container(
               padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
@@ -84,7 +84,8 @@ class _SearchState extends State<Search> {
                   height: Get.width * 0.33 * groupBox[index][jndex],
                   decoration: BoxDecoration(
                       border: Border.all(color: Colors.white),
-                      color: Colors.primaries[Random().nextInt(Colors.primaries.length)]),
+                      color: Colors.primaries[
+                          Random().nextInt(Colors.primaries.length)]),
                   child: CachedNetworkImage(
                     imageUrl:
                         'https://thumbs.dreamstime.com/b/cosmos-beauty-deep-space-elements-image-furnished-nasa-science-fiction-art-102581846.jpg',
