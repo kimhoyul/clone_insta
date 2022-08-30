@@ -1,5 +1,6 @@
 import 'package:clone_instagram/src/components/image_data.dart';
 import 'package:clone_instagram/src/controller/bottom_nav_controller.dart';
+import 'package:clone_instagram/src/pages/activehistory.dart';
 import 'package:clone_instagram/src/pages/home.dart';
 import 'package:clone_instagram/src/pages/search.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +27,8 @@ class App extends GetView<BottomNavController> {
                   );
                 },
               ),
-              Center(child: Text('UPLOAD')),
-              Center(child: Text('ACTIVITY')),
+              Container(),
+              const ActiveHistory(),
               Center(child: Text('MYPAGE')),
             ],
           ),
