@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -52,12 +50,13 @@ class MessagePopup extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      ElevatedButton(onPressed: okCallback, child: Text('확인')),
+                      ElevatedButton(
+                          onPressed: okCallback, child: const Text('확인')),
                       const SizedBox(width: 10),
                       ElevatedButton(
                         onPressed: cancleCallback,
-                        child: Text('취소'),
                         style: ElevatedButton.styleFrom(primary: Colors.grey),
+                        child: const Text('취소'),
                       ),
                     ],
                   )

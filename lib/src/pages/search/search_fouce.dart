@@ -1,8 +1,6 @@
 import 'package:clone_instagram/src/components/image_data.dart';
 import 'package:clone_instagram/src/controller/bottom_nav_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:quiver/strings.dart';
 
 class SearchFocus extends StatefulWidget {
   const SearchFocus({Key? key}) : super(key: key);
@@ -23,10 +21,10 @@ class _SearchFocusState extends State<SearchFocus>
 
   Widget _tabMenuOne(String menu) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 15),
+      padding: const EdgeInsets.symmetric(vertical: 15),
       child: Text(
         menu,
-        style: TextStyle(fontSize: 14, color: Colors.black),
+        style: const TextStyle(fontSize: 14, color: Colors.black),
       ),
     );
   }
@@ -55,17 +53,15 @@ class _SearchFocusState extends State<SearchFocus>
   }
 
   Widget _body() {
-    return Container(
-      child: TabBarView(
-        controller: tabController,
-        children: const [
-          Center(child: Text('인기페이지')),
-          Center(child: Text('계정페이지')),
-          Center(child: Text('오디오페이지')),
-          Center(child: Text('태그페이지')),
-          Center(child: Text('장소페이지')),
-        ],
-      ),
+    return TabBarView(
+      controller: tabController,
+      children: const [
+        Center(child: Text('인기페이지')),
+        Center(child: Text('계정페이지')),
+        Center(child: Text('오디오페이지')),
+        Center(child: Text('태그페이지')),
+        Center(child: Text('장소페이지')),
+      ],
     );
   }
 
@@ -86,7 +82,7 @@ class _SearchFocusState extends State<SearchFocus>
           margin: const EdgeInsets.only(right: 15),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(6),
-            color: Color(0xffefefef),
+            color: const Color(0xffefefef),
           ),
           child: const TextField(
             decoration: InputDecoration(

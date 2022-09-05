@@ -12,7 +12,8 @@ class ActiveHistory extends StatelessWidget {
           AvatarWidget(
             type: AvatarType.TYPE2,
             size: 40,
-            thumbPath: 'https://h5p.org/sites/default/files/h5p/content/1209180/images/file-6113d5f8845dc.jpeg',
+            thumbPath:
+                'https://h5p.org/sites/default/files/h5p/content/1209180/images/file-6113d5f8845dc.jpeg',
           ),
           const SizedBox(width: 10),
           const Expanded(
@@ -52,7 +53,7 @@ class ActiveHistory extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(title, style: TextStyle(fontSize: 16)),
+          Text(title, style: const TextStyle(fontSize: 16)),
           const SizedBox(height: 15),
           _activeItemOne(),
           _activeItemOne(),

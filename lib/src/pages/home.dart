@@ -1,4 +1,3 @@
-import 'package:clone_instagram/src/app.dart';
 import 'package:clone_instagram/src/components/avatar_widget.dart';
 import 'package:clone_instagram/src/components/image_data.dart';
 import 'package:clone_instagram/src/components/post_widget.dart';

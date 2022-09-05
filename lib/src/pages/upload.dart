@@ -96,10 +96,13 @@ class _UploadState extends State<Upload> {
                 ),
                 isScrollControlled: albums.length > 14 ? true : false,
                 constraints: BoxConstraints(
-                  maxHeight: MediaQuery.of(context).size.height - MediaQuery.of(context).padding.top,
+                  maxHeight: MediaQuery.of(context).size.height -
+                      MediaQuery.of(context).padding.top,
                 ),
-                builder: (_) => Container(
-                  height: albums.length > 14 ? Size.infinite.height : albums.length * 60,
+                builder: (_) => SizedBox(
+                  height: albums.length > 14
+                      ? Size.infinite.height
+                      : albums.length * 60,
                   child: Column(
                     children: [
                       Center(
@@ -154,7 +157,8 @@ class _UploadState extends State<Upload> {
           Row(
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
                 decoration: BoxDecoration(
                   color: const Color(0xff808080),
                   borderRadius: BorderRadius.circular(30),
@@ -224,7 +228,8 @@ class _UploadState extends State<Upload> {
     );
   }
 
-  Widget _photoWidget(AssetEntity asset, int size, {required Widget Function(Uint8List) builder}) {
+  Widget _photoWidget(AssetEntity asset, int size,
+      {required Widget Function(Uint8List) builder}) {
     return FutureBuilder(
       future: asset.thumbnailDataWithSize(const ThumbnailSize(200, 200)),
       builder: (_, AsyncSnapshot<Uint8List?> snapshot) {
